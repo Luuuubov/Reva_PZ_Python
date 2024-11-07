@@ -4,7 +4,7 @@ while True: # обработка исключений
     a = int(input("Введите первое число: "))
     b = int(input("Введите второе число: "))
     break # Выходим из цикла
-  except ValueError:
+  except ValueError: #ошибка
     print("Неправильно ввели!  Попробуй ещё раз!")
 
 if a == b:
