@@ -8,7 +8,7 @@ def n_sum(n):
         total += a_number
         a_number += 1
 
-    return total
+    return total 
 
 
 result = n_sum(60)
