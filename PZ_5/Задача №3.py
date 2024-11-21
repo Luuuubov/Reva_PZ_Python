@@ -3,7 +3,7 @@
 
 x = int(input("Введите число: "))
 def count_digits(x):
-    # Если число равно 0, то цифра одна
+
     if x == 0:
         return 1
 
@@ -11,8 +11,8 @@ def count_digits(x):
     # x = abs(x)
     digit = 0
     while x > 0:
-        x //= 10  # Делим число на 10 и отбрасываем остаток
-        digit += 1  # Увеличиваем счетчик цифр
+        x //= 10  # Делю число на 10 и отбрасываю остаток
+        digit += 1
     return digit
 
 digit = count_digits(x)
