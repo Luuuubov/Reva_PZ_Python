@@ -9,7 +9,7 @@ while True:
         else:
             print("A должно быть больше 1")
     except ValueError:
-        print("Вы ввели текст, а надо число!")
+     print("Вы ввели текст, а надо число!")
     break
 K = 0
 c = 0.0
