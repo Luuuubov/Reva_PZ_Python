@@ -6,41 +6,23 @@
 # A, B, C, D.
 def Mean(X, Y):
     AMean = (X + Y) / 2  #  среднее арифметическое
-    GMean = (X * Y) ** 0.5  #  среднее геометрическое
+    GMean = (Y * X) ** 0.5  #  среднее геометрическое
     return AMean, GMean # Возвращает результаты
 
 while True:
-    try:
-      A =float(input("Введите число А:"))
-      break
-    except ValueError:
-        print("Неправильно ввели!")  # если пользователь ввёл не число, а допустим текст, прогррамма завершается ошибкой выводя текст
-
-while True :
-    try:
-      B = float(input("Введите число B:"))
-      break
-    except ValueError:
-        print("Неправильно ввели!")
-
-while True:
-    try:
-        C =float(input("Введите число C:"))
-        break
-    except ValueError:
-        print("Неправильно ввели!")
-
-while True :
-    try:
-      D = float(input("Введите число D:"))
-      break
-    except ValueError:
-        print( "Неправильно ввели!")
+  try:
+    A = float(input("Введите число A: "))
+    B = float(input("Введите число B: "))
+    C = float(input("Введите число C: "))
+    D = float(input("Введите число D: "))
+    break
+  except ValueError:
+    print("Неправильно ввели!")
 
 # Вычислила средние для пар (A, B), (A, C), (A, D)
-mean_AB = Mean(A, B)
-mean_AC = Mean(A, C)
-mean_AD = Mean(A, D)
+mean_AB = Mean(A,B)
+mean_AC = Mean(A,C)
+mean_AD = Mean(A,D)
 
 
 print(f"Среднее арифметическое и геометрическое для (A, B): {mean_AB}")
