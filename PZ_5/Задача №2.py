@@ -1,6 +1,7 @@
 # Рассчитать и вывести периметр и площадь прямоугольника. Расчеты оформить в
 # функции
-def duble(a, b=20):
+
+def duble(a, b):
  ploch = a * b
  perim = 2 * (a + b)
  return ploch, perim
