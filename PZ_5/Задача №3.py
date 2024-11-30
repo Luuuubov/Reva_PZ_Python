@@ -13,5 +13,5 @@ def digits(x):
     return dig
 
 Х= int(input("Введите число: "))
-diget = digits(Х)
-print(f"Количество цифр в числе {Х}: {diget}")
+digit = digits(Х)
+print(f"Количество цифр в числе {Х}: {digit}")
