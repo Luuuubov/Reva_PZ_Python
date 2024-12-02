@@ -9,7 +9,6 @@ def LST(lst, K, L):
         return 0
     return sum(L_list) / len(L_list) # среднее арифметическое
 
-
 N = int(input("Введите размер списка N: "))
 lst = [int(input(f"Введите элемент {i+1}: ")) for i in range(N)]
 K = int(input("Введите K (индекс, начиная с 1): "))

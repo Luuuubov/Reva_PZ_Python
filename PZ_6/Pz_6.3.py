@@ -10,13 +10,12 @@
 
 import math
 
-# Ввод количества точек
+
 N = int(input("Введите количество точек N: "))
 
-# Списки для хранения координат
+#  для хранения координат
 points = []
 
-# Ввод точек
 for i in range(N):
     x = float(input(f"Введите абсциссу {i + 1}-й точки: "))
     y = float(input(f"Введите ординату {i + 1}-й точки: "))
@@ -27,7 +26,7 @@ max_point = None  # Изначально нет точки
 max_distance = 0  # Изменение начального значения расстояния
 
 for x, y in points:
-    if x < 0 and y > 0:  # Проверяем, во второй ли четверти
+    if x < 0 and y > 0:  # во второй ли четверти
         distance = math.sqrt(x**2 + y**2)  # Расчет расстояния
         if distance > max_distance:
             max_distance = distance
