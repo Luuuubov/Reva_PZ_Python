@@ -10,28 +10,34 @@
 
 import math
 
+while True:
+ try:
+   N = int(input("Введите количество точек N: "))
+   break
+ except ValueError:
+   print("Неправильно ввели!")
 
-N = int(input("Введите количество точек N: "))
-
-#  для хранения координат
-points = []
+toch = [] #  для хранения координат точек
 
 for i in range(N):
-    x = float(input(f"Введите абсциссу {i + 1}-й точки: "))
-    y = float(input(f"Введите ординату {i + 1}-й точки: "))
-    points.append((x, y))
+    while True:
+        try:
+            x = float(input(f"Введите абсциссу {i + 1}-й точки: "))
+            y = float(input(f"Введите ординату {i + 1}-й точки: "))
+            break
+        except ValueError:
+            print("Неправильно ввели!")
+    toch.append((x, y))
 
-# Поиск точки во второй четверти с максимальным расстоянием от начала координат
 max_point = None  # Изначально нет точки
 max_distance = 0  # Изменение начального значения расстояния
 
-for x, y in points:
+for x, y in toch:
     if x < 0 and y > 0:  # во второй ли четверти
-        distance = math.sqrt(x**2 + y**2)  # Расчет расстояния
-        if distance > max_distance:
-            max_distance = distance
+        dist = math.sqrt (x**2 + y**2)  #  расстояние
+        if dist > max_distance:
+            max_distance = dist
             max_point = (x, y)
-
 
 if max_point:
     print("Точка, наиболее удаленная от начала координат:", max_point)

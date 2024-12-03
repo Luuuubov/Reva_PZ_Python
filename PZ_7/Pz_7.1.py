@@ -7,6 +7,12 @@ def sum_dig(number_1):
         total += int(digit)
     return total
 
-number = input("Введите целое положительное число: ")
-result = sum_dig(number)
+while True:
+ try:
+   number = int(input("Введите целое положительное число: "))
+   break
+ except ValueError:
+   print("Неправильно ввели!")
+
+result = sum_dig(str(number))
 print(f"Сумма цифр числа {number} равна {result}.")
