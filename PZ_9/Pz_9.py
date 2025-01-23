@@ -11,7 +11,7 @@ fr_1= fr_1.split()
 fruits['Продукт1:'] = fr_1 [0]
 fruits['Цена1:'] = []
 for i in fr_1[1:6]:
-    fruits['Цена1:'].append(int(i));
+    fruits['Цена1:'].append(int(i))
 
 fruits['Продукт2:'] = fr_1 [6]
 fruits['Цена2:'] = []
