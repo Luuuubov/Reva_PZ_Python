@@ -20,6 +20,5 @@ for i in fr_1[7:]:
 
 max_price_1 = max(fruits['Цена1:'])
 max_price_2 = max(fruits['Цена2:'])
-
 print(f"{fruits['Продукт1:']}: максимальная продажа = {max_price_1} кг")
 print(f"{fruits['Продукт2:']}: максимальная продажа = {max_price_2} кг")
