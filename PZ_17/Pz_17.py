@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 
-# Создаем окно
+
 root = tk.Tk()
-root.title("Форма регистрации пользователя")
+root.title("Форма регистрации пользователя") #окно
 root.geometry("500x600")
 
 
