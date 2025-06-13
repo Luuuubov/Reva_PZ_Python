@@ -2,26 +2,22 @@
 # класса унаследуйте классы "Прямоугольник" и "Квадрат". Для класса "Квадрат"
 # переопределите методы, связанные с вычислением площади и периметра.
 
+class Figure:
+    def __init__(self, width, height): #в конструк зад свойства
+        self.width = width # сохр как атрибут
+        self.height = height
 
-class Фигура:  # опр БК
-    def __init__(self, ширина, высота):  # в конструк зад свойства
-        self.ширина = ширина # сохр как атрибут
-        self.высота = высота
+class Rectangle(Figure):
+    def __init__(self, width, height):
+        super().__init__(width, height)
 
-class Прямоугольник(Фигура):
-    def __init__(self, ширина, высота):
-        super().__init__(ширина, высота)
+class Square(Figure):
+    def __init__(self, side):
+        super().__init__(side, side) # Конст ожидает два аргумента
+        self.side = side
 
-class Квадрат(Фигура):
-    def __init__(self, сторона):
-        super().__init__(сторона, сторона)
-        self.сторона = сторона
+    def area(self):
+        return self.side * 2
 
-    def площадь(self):
-        return self.сторона ** 2
-
-    def периметр(self):
-        return 4 * self.сторона
-
-# квадрат = Квадрат(6)
-# print(f"Квадрат: Площадь = {квадрат.площадь()}, Периметр = {квадрат.периметр()}")
+    def perimeter(self):
+        return 4 * self.side
